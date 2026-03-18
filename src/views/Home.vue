@@ -29,7 +29,9 @@ import Navbar from '@/components/Navbar.vue'
     max-width: 1520px;
     margin: 0 auto;
     border-radius: 16px;
-    width: "100%"
+    width: 100%;
+  //   height: 260px;      /* 固定高度，图片可能被拉伸 */
+  // object-fit: cover;  /* 保持比例裁剪，避免变形 */
   }
 
   .oj-main-layout-header {

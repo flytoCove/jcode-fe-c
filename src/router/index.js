@@ -55,6 +55,7 @@ const router = createRouter({
       component: () => import("@/views/Answer.vue"),
     },
   ]
+  
 })
 
 export default router

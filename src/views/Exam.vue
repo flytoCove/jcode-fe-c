@@ -63,9 +63,10 @@
       <el-table-column label="用户昵称" prop="nickName" />
       <el-table-column label="用户得分" prop="score" />
     </el-table>
-      <el-pagination class="range_page" background layout="total, sizes, prev, pager, next, jumper" :total="rankTotal"
-        v-model:current-page="rankParams.pageNum" v-model:page-size="rankParams.pageSize" :page-sizes="[5, 10, 15, 20]"
-        @size-change="handleRankSizeChange" @current-change="handleRankCurrentChange" />
+    <div style="display: flex; justify-content: center; margin-top: 20px;">
+    <el-pagination class="range_page" background layout="total, sizes, prev, pager, next, jumper" :total="rankTotal"
+      v-model:current-page="rankParams.pageNum" v-model:page-size="rankParams.pageSize" :page-sizes="[5, 10, 15, 20]"
+      @size-change="handleRankSizeChange" @current-change="handleRankCurrentChange" /></div>
   </el-dialog>
 
 </template>
@@ -441,15 +442,18 @@ function togglePopover(examId) {
         }
       }
     }
+  }
 
-   .exam-page-pagination {
-      width: 100%; /* 改为100%宽度，占满父容器 */
-      justify-content: center; /* 关键：使用 flex 的居中对齐 */
-      margin: 30px 0 73px 0; /* 移除原来的 800px 左边距，保留上下边距 */
-      
-      // 注意：如果原先的 height: 40px 导致分页器显示不全，可以去掉它或改为 auto
-      // height: 40px; 
-    }
+  .exam-page-pagination {
+    width: 100%;
+    /* 改为100%宽度，占满父容器 */
+    justify-content: center;
+    /* 关键：使用 flex 的居中对齐 */
+    margin: 30px 0 73px 0;
+    /* 移除原来的 800px 左边距，保留上下边距 */
+
+    // 注意：如果原先的 height: 40px 导致分页器显示不全，可以去掉它或改为 auto
+    // height: 40px; 
   }
 }
 </style>
